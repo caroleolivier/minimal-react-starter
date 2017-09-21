@@ -17,3 +17,9 @@ Build
 ```
 npm run build
 ```
+
+Start
+---
+```
+npm run serve
+```

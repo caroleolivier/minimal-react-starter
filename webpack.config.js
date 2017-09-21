@@ -1,5 +1,6 @@
 const path = require("path");
 
+// Transpiling and Bundling config
 module.exports = {
     context: path.join(__dirname, "src"),
     entry: [
@@ -26,3 +27,11 @@ module.exports = {
         ]
     }
 }
+
+// For local development
+module.exports.devServer = {
+    contentBase: './www',
+    port: 9000
+};
+
+module.exports.devtool = 'inline-source-map';
