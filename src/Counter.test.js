@@ -1,6 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import testRenderer from 'react-test-renderer';
+import { shallow } from 'enzyme';
+
 import Counter from './Counter';
 
 describe('Counter component', () => {
@@ -17,5 +19,15 @@ describe('Counter component', () => {
         );
         let tree = component.toJSON();
         expect(tree).toMatchSnapshot("rendering");
+    });
+
+    test('increases couter on click event', () => {
+        const counterWrapper = shallow(<Counter />);
+        const counter = counterWrapper.instance();
+
+        expect(counter.state.counter).toBe(0);
+
+        counterWrapper.simulate('click');
+        expect(counter.state.counter).toBe(1);
     });
 });
