@@ -9,7 +9,7 @@ describe('Counter component', () => {
     test('renders without crashing', () => {
         // test with a DOM and renders deeply (as opposed to a shallowly, i.e. one level deep)
         const div = document.createElement('div');
-        ReactDOM.render(<Counter/>, div);
+        expect(() => ReactDOM.render(<Counter/>, div)).not.toThrow();
     });
 
     test('renders according to snapshot', () => {
