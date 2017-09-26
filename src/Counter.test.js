@@ -12,7 +12,7 @@ describe('Counter component', () => {
         expect(() => ReactDOM.render(<Counter/>, div)).not.toThrow();
     });
 
-    test('renders according to snapshot', () => {
+    test('initial DOM matches snapshot', () => {
         // rendering doesn't depend on the DOM
         const component = testRenderer.create(
             <Counter/>
@@ -21,7 +21,7 @@ describe('Counter component', () => {
         expect(tree).toMatchSnapshot("rendering");
     });
 
-    test('increases counter on click event', () => {
+    test('increments its counter by one on click event', () => {
         const counterWrapper = shallow(<Counter />);
         const counter = counterWrapper.instance();
 
