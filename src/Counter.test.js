@@ -21,7 +21,7 @@ describe('Counter component', () => {
         expect(tree).toMatchSnapshot("rendering");
     });
 
-    test('increases couter on click event', () => {
+    test('increases counter on click event', () => {
         const counterWrapper = shallow(<Counter />);
         const counter = counterWrapper.instance();
 
