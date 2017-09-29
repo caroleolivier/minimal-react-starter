@@ -17,7 +17,7 @@ describe('Counter component', () => {
     test('initial DOM matches snapshot', () => {
         // rendering doesn't depend on the DOM
         const component = testRenderer.create(
-            <Counter />,
+            <Counter />
         );
         const tree = component.toJSON();
         expect(tree).toMatchSnapshot('rendering');

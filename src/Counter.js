@@ -4,7 +4,7 @@ class Counter extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            counter: 0,
+            counter: 0
         };
         this.onClickHandle = this.onClickHandle.bind(this);
     }
