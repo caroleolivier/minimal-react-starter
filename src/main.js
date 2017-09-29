@@ -1,9 +1,11 @@
+/* eslint-env browser */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 
-import Counter from './Counter.js';
+import Counter from './Counter';
 
 ReactDOM.render(
     React.createElement(Counter),
-    document.getElementById("mount")
+    document.getElementById('mount'),
 );

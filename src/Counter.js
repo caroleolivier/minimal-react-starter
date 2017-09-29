@@ -9,16 +9,16 @@ class Counter extends React.Component {
         this.onClickHandle = this.onClickHandle.bind(this);
     }
 
+    onClickHandle() {
+        this.setState({ counter: this.state.counter + 1 });
+    }
+
     render() {
         return (
             <button onClick={this.onClickHandle}>
                 {this.state.counter}
             </button>
         );
-    }
-
-    onClickHandle() {
-        this.setState({counter: this.state.counter+1});
     }
 }
 
