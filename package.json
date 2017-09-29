@@ -4,6 +4,7 @@
     "description": "Minimal React starter application",
     "main": "index.js",
     "scripts": {
+        "lint": "eslint src/",
         "build": "webpack",
         "serve": "webpack-dev-server",
         "test": "jest"

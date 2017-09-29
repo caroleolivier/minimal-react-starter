@@ -1,3 +1,5 @@
+/* eslint-env browser, jest */
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import testRenderer from 'react-test-renderer';
@@ -9,16 +11,16 @@ describe('Counter component', () => {
     test('renders without crashing', () => {
         // test with a DOM and renders deeply (as opposed to a shallowly, i.e. one level deep)
         const div = document.createElement('div');
-        expect(() => ReactDOM.render(<Counter/>, div)).not.toThrow();
+        expect(() => ReactDOM.render(<Counter />, div)).not.toThrow();
     });
 
     test('initial DOM matches snapshot', () => {
         // rendering doesn't depend on the DOM
         const component = testRenderer.create(
-            <Counter/>
+            <Counter />,
         );
-        let tree = component.toJSON();
-        expect(tree).toMatchSnapshot("rendering");
+        const tree = component.toJSON();
+        expect(tree).toMatchSnapshot('rendering');
     });
 
     test('increments its counter by one on click event', () => {
