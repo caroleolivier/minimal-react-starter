@@ -1,5 +1,6 @@
 Minimal React Starter
 ---
+[![Build Status](https://travis-ci.org/caroleolivier/minimal-react-starter.svg?branch=master)](https://travis-ci.org/caroleolivier/minimal-react-starter)
 
 A minimal setup to write web applications using [React](https://facebook.github.io/react/), [Babel](https://babeljs.io/) and [Webpack](https://webpack.js.org/).
 
