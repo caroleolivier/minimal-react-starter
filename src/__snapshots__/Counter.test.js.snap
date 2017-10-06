@@ -2,6 +2,7 @@
 
 exports[`rendering 1`] = `
 <button
+  className="counter"
   onClick={[Function]}
 >
   0
