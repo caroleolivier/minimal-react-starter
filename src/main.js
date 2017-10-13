@@ -5,7 +5,16 @@ import ReactDOM from 'react-dom';
 
 import App from './App';
 
-ReactDOM.render(
-    React.createElement(App),
-    document.getElementById('mount'),
-);
+
+function handleNewHash() {
+    const location = window.location.hash.replace(/^#\/?|\/$/g, '').split('/');
+
+    ReactDOM.render(
+        React.createElement(App, { location }),
+        document.getElementById('mount'),
+    );
+}
+
+// Handle the initial route and browser navigation events
+handleNewHash();
+window.addEventListener('hashchange', handleNewHash, false);
