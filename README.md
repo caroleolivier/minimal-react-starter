@@ -32,4 +32,4 @@ Start
 ```
 npm run serve
 ```
-Go to http://localhost:9000/
+Go to http://localhost:9000/#/counter
