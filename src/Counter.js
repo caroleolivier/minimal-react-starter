@@ -1,13 +1,20 @@
-import React from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+
 import style from './style.scss';
 
-class Counter extends React.Component {
+
+class Counter extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            counter: 0
+            counter: props.startAt
         };
         this.onClickHandle = this.onClickHandle.bind(this);
+    }
+
+    componentWillReceiveProps(nextProps) {
+        this.setState({ counter: nextProps.startAt });
     }
 
     onClickHandle() {
@@ -22,5 +29,9 @@ class Counter extends React.Component {
         );
     }
 }
+
+Counter.propTypes = {
+    startAt: PropTypes.number.isRequired
+};
 
 export default Counter;

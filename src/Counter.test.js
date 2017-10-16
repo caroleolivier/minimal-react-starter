@@ -13,26 +13,26 @@ describe('Counter component', () => {
         // disabling the eslint rule. Need to replace that test in the future.
         /* eslint-disable react/no-render-return-value */
         const div = document.createElement('div');
-        expect(() => ReactDOM.render(<Counter />, div)).not.toThrow();
+        expect(() => ReactDOM.render(<Counter startAt={10} />, div)).not.toThrow();
         /* eslint-enable react/no-render-return-value */
     });
 
     test('initial DOM matches snapshot', () => {
         // rendering doesn't depend on the DOM
         const component = testRenderer.create(
-            <Counter />
+            <Counter startAt={10} />
         );
         const tree = component.toJSON();
         expect(tree).toMatchSnapshot('rendering');
     });
 
     test('increments its counter by one on click event', () => {
-        const counterWrapper = shallow(<Counter />);
+        const counterWrapper = shallow(<Counter startAt={10} />);
         const counter = counterWrapper.instance();
 
-        expect(counter.state.counter).toBe(0);
+        expect(counter.state.counter).toBe(10);
 
         counterWrapper.simulate('click');
-        expect(counter.state.counter).toBe(1);
+        expect(counter.state.counter).toBe(11);
     });
 });

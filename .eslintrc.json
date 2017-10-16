@@ -1,9 +1,11 @@
 {
     "extends": "airbnb",
     "rules": {
+        "comma-dangle": ["error", "never"],
         "indent": ["error", 4],
+        "max-len": ["warn", 120],
         "react/jsx-filename-extension": 0,
         "react/jsx-indent": 0,
-        "comma-dangle": ["error", "never"]
+        "react/prefer-stateless-function": 0
     }
 }
