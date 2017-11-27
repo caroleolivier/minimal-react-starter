@@ -2,6 +2,7 @@
     "compilerOptions": {
         "sourceMap": true,
         "target": "es5",
-        "jsx": "preserve"
+        // would prefer to have "preserve" but it is not supported by ts-jest
+        "jsx": "react"
     }
 }
