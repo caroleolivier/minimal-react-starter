@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { PropTypes } from 'prop-types';
 import Counter from './Counter';
+import { Greeter } from './Greeter.tsx';
 
 function Home() {
     return <div>Welcome</div>;
@@ -15,6 +16,12 @@ const routes = {
         getComponent: (urlParams) => {
             const startAt = urlParams[0] && !isNaN(Number(urlParams[0])) ? Number(urlParams[0]) : 0;
             return <Counter startAt={startAt} />;
+        }
+    },
+    greet: {
+        getComponent: (urlParams) => {
+            const who = urlParams[0] ? urlParams[0] : 'somebody';
+            return <Greeter name={who} />;
         }
     },
     home: {
