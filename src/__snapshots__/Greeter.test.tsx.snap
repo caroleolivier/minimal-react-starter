@@ -1,8 +1,18 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`rendering 1`] = `
-<h1>
-  Hello 
-  johndoe
-</h1>
+<div>
+  <h1>
+    Hello 
+    johndoe
+  </h1>
+  <h2>
+    0
+  </h2>
+  <button
+    onClick={[Function]}
+  >
+    click me
+  </button>
+</div>
 `;
